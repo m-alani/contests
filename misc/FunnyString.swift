@@ -1,14 +1,15 @@
 //
 //  FunnyString.swift
-//  
+//
 //  Practice solution - Marwan Alani - 2017
 //
 //  Check the problem (and run the code) on HackerRank @ https://www.hackerrank.com/challenges/funny-string
-//
+//  Note: make sure that you select "Swift" from the top-right language menu of the code editor when testing this code
+// 
 
 if let cases = Int(readLine() ?? "0") {
     var output = [String]()
-    
+
     // Process Input
     for _ in 1...cases {
         if let line: String = readLine() {
@@ -28,7 +29,7 @@ if let cases = Int(readLine() ?? "0") {
             output.append(funny ? "Funny" : "Not Funny")
         }
     }
-    
+
     // Print Output
     for line in output {
         print(line)
