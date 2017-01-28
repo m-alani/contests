@@ -31,6 +31,7 @@ if let cases: Int = Int(readLine() ?? "0") {
                     charIndex = line.index(after: charIndex)
                 }
             }
+            // Save the number of deletions for this case
             output.append("\(deleteOperations)")
         }
     }
