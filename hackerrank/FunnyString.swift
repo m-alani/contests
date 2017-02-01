@@ -5,7 +5,7 @@
 //
 //  Check the problem (and run the code) on HackerRank @ https://www.hackerrank.com/challenges/funny-string
 //  Note: make sure that you select "Swift" from the top-right language menu of the code editor when testing this code
-// 
+//
 
 if let cases = Int(readLine() ?? "0") {
     var output = [String]()
@@ -14,7 +14,7 @@ if let cases = Int(readLine() ?? "0") {
     for _ in 1...cases {
         if let line: String = readLine() {
             var funny = true
-            let myString = line.utf16
+            let myString = line.utf8
             let count = myString.count
             for offset in 0...(count/2) - 1 {
                 let firstFrontAscii = Int(myString[myString.index(myString.startIndex, offsetBy: offset)])
