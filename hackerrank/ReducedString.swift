@@ -1,5 +1,5 @@
 //
-//  Reduced String.swift
+//  ReducedString.swift
 //
 //  Practice solution - Marwan Alani - 2017
 //
