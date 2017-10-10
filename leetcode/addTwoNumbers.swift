@@ -23,12 +23,12 @@ class Solution {
         var digit = 0, carry = 0, result: ListNode?, itr: ListNode?, l1 = list1, l2 = list2
         repeat {
             digit = ((l1?.val) ?? 0) + ((l2?.val) ?? 0) + carry
-            carry = digit / 10
+            carry = (digit > 9) ? 1 : 0
             if result == nil {
-                result = ListNode(digit % 10)
+                result = ListNode((digit > 9) ? digit - 10 : digit)
                 itr = result
             } else {
-                itr?.next = ListNode(digit % 10)
+                itr?.next = ListNode((digit > 9) ? digit - 10 : digit)
                 itr = itr?.next
             }
             l1 = l1?.next
