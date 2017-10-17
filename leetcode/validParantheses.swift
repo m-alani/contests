@@ -8,26 +8,24 @@
 //
 
 class Solution {
-    func isValid(_ input: String) -> Bool {
-        var valid = true
-        var stack = [Character]()
-        let s = [Character](input.characters)
-        for char in s {
-            switch char {
-                case "{": stack.append("}")
-                case "(": stack.append(")")
-                case "[": stack.append("]")
-                default: if (stack.count == 0 || stack.last != char) {
-                    valid = false
-                    break
-                } else {
-                    stack.removeLast()
-                }
-            }
+  func isValid(_ input: String) -> Bool {
+    var valid = true
+    var stack = [Character]()
+    let s = [Character](input.characters)
+    for char in s {
+      switch char {
+        case "{": stack.append("}")
+        case "(": stack.append(")")
+        case "[": stack.append("]")
+        default: if (stack.count == 0 || stack.popLast() != char) {
+          valid = false
+          break
         }
-        if (stack.count != 0) {
-            valid = false
-        }
-        return valid
+      }
     }
+    if (stack.count != 0) {
+      valid = false
+    }
+    return valid
+  }
 }
