@@ -9,18 +9,16 @@
 
 class Solution {
     func moveZeroes(_ nums: inout [Int]) {
-        var count = 0, itr = 0
-        while (itr < nums.count) {
-            if nums[itr] == 0 {
-                nums.remove(at: itr)
-                count += 1
-            } else {
+        var itr = 0
+        for num in nums {
+            if num != 0 {
+                nums[itr] = num
                 itr += 1
             }
         }
-        while (count > 0) {
-            nums.append(0)
-            count -= 1
+        while (itr < nums.count) {
+            nums[itr] = 0
+            itr += 1
         }
     }
 }
