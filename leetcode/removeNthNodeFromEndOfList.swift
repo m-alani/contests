@@ -7,6 +7,17 @@
 //  Note: make sure that you select "Swift" from the top-left language menu of the code editor when testing this code
 //
 
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     public var val: Int
+ *     public var next: ListNode?
+ *     public init(_ val: Int) {
+ *         self.val = val
+ *         self.next = nil
+ *     }
+ * }
+ */
 class Solution {
   func removeNthFromEnd(_ head: ListNode?, _ n: Int) -> ListNode? {
     var distance = n
